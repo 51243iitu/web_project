@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Inclusive Learning for Dyslexia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Inclusive Learning Hub: Student Registration</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="simplification.html">AI Simplification</a></li>
+                <li><a href="visual-accessibility.html">Visual Accessibility</a></li>
+                <li><a href="materials.html">Study Materials (CRUD)</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="form-container">
+            <h2>Create Your Learner Profile</h2>
+            <p>Customize your reading accessibility options and access tailored study tools.</p>
+
+            <div id="formStatusMessage" class="status-box"></div>
+
+            <form id="registerForm" novalidate>
+                <div class="form-group">
+                    <label for="fullName">Full Name <span class="req">*</span></label>
+                    <input type="text" id="fullName" placeholder="e.g., Jane Doe" required>
+                    <small id="fullNameError" class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address <span class="req">*</span></label>
+                    <input type="email" id="email" placeholder="jane.doe@example.com" required>
+                    <small id="emailError" class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="birthday">Date of Birth <span class="req">*</span></label>
+                    <input type="date" id="birthday" required>
+                    <small id="birthdayError" class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password <span class="req">*</span></label>
+                    <input type="password" id="password" placeholder="Min. 8 chars (uppercase, lowercase, number)" required>
+                    <small id="passwordError" class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password <span class="req">*</span></label>
+                    <input type="password" id="confirmPassword" placeholder="Repeat your password" required>
+                    <small id="confirmPasswordError" class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label for="assistPreference">Primary Assistive Preference (Extra Field)</label>
+                    <select id="assistPreference">
+                        <option value="text-simplification">AI Text Simplification</option>
+                        <option value="audio-narration">Synchronized Audio Narration</option>
+                        <option value="visual-contrast">High Contrast &amp; Focus Rulers</option>
+                        <option value="dyslexic-fonts">Dyslexia-Optimized Typography</option>
+                    </select>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label>
+                        <input type="checkbox" id="consent">
+                        I consent to adaptive reading storage and accessibility terms. <span class="req">*</span>
+                    </label>
+                    <small id="consentError" class="error-msg"></small>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Complete Registration</button>
+            </form>
+            <p class="form-footer-text">Already registered? <a href="login.html">Log in here</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Inclusive Learning Team Project. All rights reserved.</p>
+    </footer>
+
+    <script src="auth.js"></script>
+</body>
+</html>

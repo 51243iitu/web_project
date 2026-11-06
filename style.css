@@ -1,0 +1,350 @@
+
+/* Сброс базовых отступов */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Общие стили страницы */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Легко читаемый шрифт без засечек */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #222222;
+    background-color: #f4f6f9;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 25px 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+/* Горизонтальное меню навигации */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #2563eb;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #1d4ed8;
+    text-decoration: underline;
+}
+
+/* Основной блок с контентом */
+main {
+    max-width: 860px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Карточки секций */
+section {
+    background-color: #ffffff;
+    padding: 24px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+    border: 1px solid #dcdfe4;
+}
+
+/* Заголовки */
+h2 {
+    font-size: 1.4rem;
+    color: #1e3a8a;
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-size: 1.15rem;
+    color: #334155;
+    margin: 18px 0 10px 0;
+}
+
+/* Текст */
+p {
+    margin-bottom: 12px;
+}
+
+/* Ссылки в тексте */
+main a {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+main a:hover {
+    color: #1d4ed8;
+}
+
+/* Списки */
+ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Изображения и подписи */
+figure {
+    margin: 20px 0;
+    text-align: center;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #cbd5e1;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+/* Подвал сайта (footer) */
+footer {
+    background-color: #0f172a;
+    color: #e2e8f0;
+    padding: 30px 20px;
+    margin-top: 40px;
+}
+
+/* Блок вклада участника в футере */
+footer section {
+    background-color: #1e293b;
+    border: 1px solid #334155;
+    color: #e2e8f0;
+    max-width: 860px;
+    margin: 0 auto 20px auto;
+}
+
+footer h3 {
+    color: #ffffff;
+}
+
+footer code {
+    background-color: #0f172a;
+    color: #38bdf8;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+footer > p {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #94a3b8;
+}
+/* ===================================================
+   Form & CRUD Component Styling (Lab 3)
+   =================================================== */
+
+.form-container, .crud-form-card, .controls-card {
+    background: #ffffff;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #1e293b;
+}
+
+.form-group input, 
+.form-group select, 
+.form-group textarea,
+.filter-input, 
+.filter-select {
+    padding: 9px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 0.95rem;
+    font-family: inherit;
+}
+
+.input-error {
+    border-color: #dc2626 !important;
+    background-color: #fef2f2;
+}
+
+.error-msg {
+    color: #dc2626;
+    font-size: 0.85rem;
+    margin-top: 4px;
+    font-weight: 500;
+}
+
+.req {
+    color: #dc2626;
+}
+
+.status-box {
+    display: none;
+    padding: 12px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+.status-box.success {
+    display: block;
+    background-color: #dcfce7;
+    color: #166534;
+    border: 1px solid #86efac;
+}
+
+.status-box.error {
+    display: block;
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fca5a5;
+}
+
+.btn {
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-secondary {
+    background-color: #64748b;
+    color: #ffffff;
+}
+
+.btn-danger {
+    background-color: #dc2626;
+    color: #ffffff;
+}
+
+.btn-sm {
+    padding: 5px 10px;
+    font-size: 0.85rem;
+}
+
+.form-row {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.flex-1 { flex: 1; min-width: 200px; }
+.flex-center { display: flex; align-items: center; padding-top: 15px; }
+
+/* Filter Bar */
+.filter-bar {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.count-display {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+/* Dynamic Cards Grid */
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.material-card {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.material-card h3 {
+    margin: 10px 0;
+    color: #1e3a8a;
+    font-size: 1.1rem;
+}
+
+.card-excerpt {
+    font-size: 0.95rem;
+    color: #334155;
+    flex-grow: 1;
+    margin-bottom: 12px;
+}
+
+.card-header, .card-meta, .card-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-actions {
+    margin-top: 14px;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 10px;
+}
+
+/* Badges for Conditional UI */
+.badge {
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.badge-beginner { background: #dcfce7; color: #15803d; }
+.badge-intermediate { background: #fef3c7; color: #b45309; }
+.badge-advanced { background: #ede9fe; color: #6d28d9; }
+.badge-audio { background: #e0f2fe; color: #0369a1; }
+.badge-no-audio { background: #f1f5f9; color: #64748b; }
+.category-tag { font-size: 0.8rem; color: #64748b; font-weight: 600; }

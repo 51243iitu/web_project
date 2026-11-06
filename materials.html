@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study Materials Vault - Inclusive Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Inclusive Learning: Study Materials Vault (CRUD)</h1>
+        <nav aria-label="Main Navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="simplification.html">AI Simplification</a></li>
+                <li><a href="visual-accessibility.html">Visual Accessibility</a></li>
+                <li><a href="materials.html">Study Materials (CRUD)</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- CRUD CREATE / UPDATE FORM -->
+        <section class="crud-form-card">
+            <h2>Add or Modify Study Material</h2>
+            <form id="materialForm">
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="matTitle">Title <span class="req">*</span></label>
+                        <input type="text" id="matTitle" placeholder="e.g., Photosynthesis Basics" required>
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="matCategory">Category <span class="req">*</span></label>
+                        <select id="matCategory" required>
+                            <option value="">Select Category</option>
+                            <option value="Science">Science</option>
+                            <option value="History">History</option>
+                            <option value="Literature">Literature</option>
+                            <option value="Technology">Technology</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group flex-1">
+                        <label for="matLevel">Reading Level <span class="req">*</span></label>
+                        <select id="matLevel" required>
+                            <option value="Beginner">Beginner (Short &amp; Direct)</option>
+                            <option value="Intermediate">Intermediate (Medium)</option>
+                            <option value="Advanced">Advanced (Academic)</option>
+                        </select>
+                    </div>
+                    <div class="form-group flex-1">
+                        <label for="matWordCount">Estimated Word Count <span class="req">*</span></label>
+                        <input type="number" id="matWordCount" min="10" placeholder="e.g., 200" required>
+                    </div>
+                    <div class="form-group flex-center">
+                        <label>
+                            <input type="checkbox" id="matHasAudio"> Includes Audio Narration
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="matContent">Simplified Content Passage <span class="req">*</span></label>
+                    <textarea id="matContent" rows="3" placeholder="Enter the plain-language simplified reading passage..." required></textarea>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="formSubmitBtn" class="btn btn-primary">Add Material</button>
+                    <button type="button" id="cancelEditBtn" class="btn btn-secondary" style="display: none;">Cancel</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- CONTROLS: SEARCH, FILTER, SORT -->
+        <section class="controls-card">
+            <h2>Browse Materials</h2>
+            <div class="filter-bar">
+                <input type="text" id="searchInput" placeholder="Search by title or text..." class="filter-input">
+                <select id="categoryFilter" class="filter-select">
+                    <option value="all">All Categories</option>
+                    <option value="Science">Science</option>
+                    <option value="History">History</option>
+                    <option value="Literature">Literature</option>
+                    <option value="Technology">Technology</option>
+                </select>
+                <select id="sortSelector" class="filter-select">
+                    <option value="default">Sort by: Default</option>
+                    <option value="wordsAsc">Word Count (Low to High)</option>
+                    <option value="wordsDesc">Word Count (High to Low)</option>
+                    <option value="titleAsc">Title (A-Z)</option>
+                </select>
+            </div>
+            <p id="itemCountDisplay" class="count-display"></p>
+        </section>
+
+        <!-- DYNAMIC CARDS CONTAINER -->
+        <section>
+            <div id="materialsGrid" class="materials-grid"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Inclusive Learning Team Project. All rights reserved.</p>
+    </footer>
+
+    <script src="crud.js"></script>
+</body>
+</html>
